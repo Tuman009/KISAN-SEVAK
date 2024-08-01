@@ -13,6 +13,7 @@ st.set_page_config(
     layout="centered",    # Page layout option
 )
 
+
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 # Set up Google Gemini-Pro AI model
@@ -28,8 +29,7 @@ def translate_role_for_streamlit(user_role):
 
 # Function to check if a question is related to farming
 def is_farming_question(question):
-    def is_farming_question(question):
-        farming_keywords = ["advantages","disadvantages","Advantages","Disadvantages","season","types","best","earning","money","cost",
+    farming_keywords = ["advantages","disadvantages","Advantages","Disadvantages","season","types","best","earning","money","cost",
     "farm", "farmer", "agriculture", "crop", "livestock", "harvest", "plant", "soil", "irrigation","grow","place","worst","government"," policies",
     "fertilizer", "pesticide", "tractor", "agribusiness", "horticulture", "agronomy", "farming", "weather","seeds","seed","place",
     "climate", "rain", "drought", "flood", "temperature", "humidity", "forecast", "precipitation",
@@ -61,6 +61,7 @@ def is_farming_question(question):
     "regenerative systems", "climate mitigation", "agricultural transformation", "agribusiness entrepreneurship",
     "regional food systems", "ecosystem management", "renewable resources", "pest resistance", "agricultural resilience"
 ]
+
     return any(keyword in question.lower() for keyword in farming_keywords)
 
 # Initialize chat session in Streamlit if not already present
