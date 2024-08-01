@@ -29,7 +29,7 @@ def translate_role_for_streamlit(user_role):
 # Function to check if a question is related to farming
 def is_farming_question(question):
     def is_farming_question(question):
-    farming_keywords = ["advantages","disadvantages","Advantages","Disadvantages","season","types","best","earning","money","cost",
+        farming_keywords = ["advantages","disadvantages","Advantages","Disadvantages","season","types","best","earning","money","cost",
     "farm", "farmer", "agriculture", "crop", "livestock", "harvest", "plant", "soil", "irrigation","grow","place","worst","government"," policies",
     "fertilizer", "pesticide", "tractor", "agribusiness", "horticulture", "agronomy", "farming", "weather","seeds","seed","place",
     "climate", "rain", "drought", "flood", "temperature", "humidity", "forecast", "precipitation",
