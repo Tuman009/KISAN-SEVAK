@@ -28,19 +28,39 @@ def translate_role_for_streamlit(user_role):
 
 # Function to check if a question is related to farming
 def is_farming_question(question):
-    farming_keywords = [
-        
-    "farm", "farmer", "agriculture", "crop", "livestock", "harvest", "plant", "soil", "irrigation",
-    "fertilizer", "pesticide", "tractor", "agribusiness", "horticulture", "agronomy", "farming", "weather",
+    def is_farming_question(question):
+    farming_keywords = ["advantages","disadvantages","Advantages","Disadvantages","season","types","best","earning","money","cost",
+    "farm", "farmer", "agriculture", "crop", "livestock", "harvest", "plant", "soil", "irrigation","grow","place","worst","government"," policies",
+    "fertilizer", "pesticide", "tractor", "agribusiness", "horticulture", "agronomy", "farming", "weather","seeds","seed","place",
     "climate", "rain", "drought", "flood", "temperature", "humidity", "forecast", "precipitation",
     "farming techniques", "organic", "sustainable", "yield", "seed", "greenhouse", "pest", "disease control",
-    "tillage", "conservation", "aquaculture", "hydroponics", "permaculture", "animal husbandry",
+    "tillage", "conservation", "aquaculture", "hydroponics", "permaculture", "animal husbandry", "cultivation", "cultivate",
     "dairy", "poultry", "bee", "apiculture", "silviculture", "forestry", "crop rotation",
     "composting", "green manure", "cover crops", "mulching", "pruning", "grafting", "genetically modified",
     "biotechnology", "soil health", "soil erosion", "water management", "farm management", "market",
-    "pricing", "export", "import", "rural", "extension services", "farm policy", "food security", "agroecology"
-
- ]
+    "pricing", "export", "import", "rural", "extension services", "farm policy", "food security", "agroecology", "growing",
+    "vertical farming", "agritech", "precision agriculture", "drone technology", "smart farming", "urban farming", "microgreens",
+    "food supply chain", "carbon farming", "regenerative agriculture", "agricultural innovation", "farmland",
+    "agricultural sustainability", "climate-smart agriculture", "nutrient management", "food safety", "supply chain management",
+    "agricultural policy", "digital farming", "blockchain in agriculture", "AI in agriculture", "robotic farming", "crop monitoring",
+    "land management", "agricultural economics", "farmer cooperatives", "biopesticides", "integrated pest management",
+    "agricultural engineering", "supply chain resilience", "data-driven agriculture", "farm-to-table", "local food systems",
+    "traceability", "biodiversity", "agroforestry", "farmer training", "agricultural finance", "smart irrigation", "agricultural research",
+    "sustainable practices", "renewable energy in agriculture", "agricultural education", "community-supported agriculture",
+    "e-agriculture", "farm safety", "crop insurance", "agrifood", "alternative proteins", "soil carbon sequestration",
+    "farmer livelihoods", "post-harvest management", "aquaponics", "biocontrol", "circular agriculture", "farmer empowerment",
+    "climate adaptation", "resilient agriculture", "plant breeding", "vertical integration", "organic certification",
+    "agroinformatics", "soil microbiome", "food sovereignty", "biofortification", "climate resilience", 
+    "nutraceuticals", "agro-tourism", "eco-friendly farming", "perennial crops", "conservation tillage",
+    "crop diversification", "biostimulants", "farmer aggregation", "agro-climatic zones", "food traceability", 
+    "zero tillage", "smart greenhouses", "agricultural drones", "weather stations", "sustainable intensification",
+    "soil fertility", "biochar", "trace gas emissions", "remote sensing", "ecosystem services", "precision livestock farming",
+    "land tenure", "farm digitization", "crop modeling", "water footprint", "food miles", "digital soil mapping",
+    "integrated farming", "nutrient cycling", "agri-fintech", "crop phenotyping", "food hubs", "carbon sequestration",
+    "vertical integration", "open-pollinated varieties", "natural farming", "agricultural robotics", "traceability",
+    "regenerative systems", "climate mitigation", "agricultural transformation", "agribusiness entrepreneurship",
+    "regional food systems", "ecosystem management", "renewable resources", "pest resistance", "agricultural resilience"
+]
     return any(keyword in question.lower() for keyword in farming_keywords)
 
 # Initialize chat session in Streamlit if not already present
